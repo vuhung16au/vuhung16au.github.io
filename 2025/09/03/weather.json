@@ -1,0 +1,53 @@
+{
+  "coord": {
+    "lon": 151.0931,
+    "lat": -33.9873
+  },
+  "weather": [
+    {
+      "id": 801,
+      "main": "Clouds",
+      "description": "few clouds",
+      "icon": "02d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 15.15,
+    "feels_like": 14.1,
+    "temp_min": 15.15,
+    "temp_max": 15.15,
+    "pressure": 1021,
+    "humidity": 53,
+    "sea_level": 1021,
+    "grnd_level": 1015
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 3.7,
+    "deg": 290,
+    "gust": 5.92
+  },
+  "clouds": {
+    "all": 16
+  },
+  "dt": 1756855905,
+  "sys": {
+    "country": "AU",
+    "sunrise": 1756843922,
+    "sunset": 1756885118
+  },
+  "timezone": 36000,
+  "id": 2206003,
+  "name": "Blakehurst",
+  "cod": 200,
+  "metadata": {
+    "fetched_at": "2025-09-03T09:34:25.688176",
+    "city": "Sydney, Australia",
+    "coordinates": {
+      "latitude": -33.98728,
+      "longitude": 151.0931381
+    },
+    "units": "metric"
+  }
+}
