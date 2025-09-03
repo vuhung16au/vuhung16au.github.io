@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with me for collaborations, opportunities, or just to say hello">
+    <meta name="keywords" content="contact, get in touch, collaboration, opportunities">
+    <meta name="author" content="Your Name">
+    <title>Contact Me - Your Name</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">Your Name</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="experience.html" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact me</a>
+                </li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <button class="theme-toggle" id="theme-toggle">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Contact Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Get In Touch</h1>
+                        <p class="hero-subtitle">Let's Connect</p>
+                        <p class="hero-description">
+                            I'm always interested in hearing about new opportunities, collaborations, or just having a friendly chat about technology and development.
+                        </p>
+                    </div>
+                    <div class="hero-image">
+                        <div class="profile-placeholder">
+                            <span>✉️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="about" id="contact">
+            <div class="container">
+                <h2 class="section-title">Send Me a Message</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>your.email@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>City, State, Country</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Available for freelance work and full-time opportunities</p>
+                            </div>
+                        </div>
+                        
+                        <h3>Connect With Me</h3>
+                        <div class="social-links contact-social">
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <span>🐙</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <span>💼</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <span>🐦</span>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Email">
+                                <span>✉️</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Contact Section -->
+        <section class="quick-links">
+            <div class="container">
+                <h2 class="section-title">Other Ways to Connect</h2>
+                <div class="links-grid">
+                    <div class="link-card">
+                        <div class="link-icon">💼</div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally and stay updated with my career journey</p>
+                        <a href="#" class="btn btn-outline">Connect on LinkedIn</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">🐙</div>
+                        <h3>GitHub</h3>
+                        <p>Check out my open source contributions and personal projects</p>
+                        <a href="#" class="btn btn-outline">View GitHub Profile</a>
+                    </div>
+                    <div class="link-card">
+                        <div class="link-icon">🐦</div>
+                        <h3>Twitter</h3>
+                        <p>Follow me for tech insights, development tips, and industry updates</p>
+                        <a href="#" class="btn btn-outline">Follow on Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Your Name</h3>
+                    <p>Developer & Professional</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <span>🐙</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <span>💼</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <span>🐦</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Email">
+                            <span>✉️</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Your Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
