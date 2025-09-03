@@ -45,6 +45,22 @@
     border: 1px solid var(--border-color);
 }
 
+[data-theme="dark"] .tech-tag {
+    background: var(--bg-secondary);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
 [data-theme="dark"] .footer {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
