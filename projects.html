@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vuhung16au.github.io/projects.html">
     <meta property="og:image" content="assets/favicon/android-chrome-512x512.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <meta name="theme-color" content="#ffffff">
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWY9HL3C85"></script>
@@ -36,147 +25,269 @@
             page_location: window.location.href
         });
     </script>
+    
+    <!-- Tailwind CSS 4.0 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        accent: '#28a745',
+                        graphite: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#007bff">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-brand">
-                <a href="index.html">Vu Hung Nguyen</a>
+<body class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand -->
+                <div class="text-2xl font-bold">
+                    <a href="index.html" class="text-primary hover:text-accent transition-colors duration-200">Vu Hung Nguyen</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        About me
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="projects.html" class="text-primary dark:text-blue-400 font-medium transition-colors duration-200 relative group">
+                        Projects
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary"></span>
+                    </a>
+                    <a href="experience.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Experience
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="skills.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Skills
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Contact me
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </div>
+                
+                <!-- Theme Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+                        <span class="text-xl">☀️</span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link active">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="experience.html" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="skills.html" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact me</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Home</a>
+                <a href="about.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">About me</a>
+                <a href="projects.html" class="block text-primary dark:text-blue-400 font-medium transition-colors duration-200">Projects</a>
+                <a href="experience.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Experience</a>
+                <a href="skills.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Skills</a>
+                <a href="contact.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Contact me</a>
             </div>
-            <button class="theme-toggle" id="theme-toggle">
-                <span class="theme-icon">☀️</span>
-            </button>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Main Content -->
-    <main class="main">
-        <!-- Projects Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">My Projects</h1>
-                        <p class="hero-subtitle">Showcasing My Work</p>
-                        <p class="hero-description">
-                            Explore the projects I've built, from web applications to innovative solutions that solve real-world problems.
-                        </p>
-                    </div>
-                    <div class="hero-image">
-                        <div class="profile-placeholder">
-                            <span>🚀</span>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                    <div class="space-y-8 animate-fade-in">
+                        <div class="space-y-4">
+                            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                                AI-Powered Solutions
+                            </h1>
+                            <p class="text-xl text-primary dark:text-blue-400 font-semibold">
+                                Transforming Ideas into Intelligent Systems
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Discover cutting-edge AI projects that drive business value, from automated business plan generation to intelligent resume tailoring. Each solution combines advanced machine learning with practical applications that solve real-world challenges.
+                            </p>
                         </div>
+                    </div>
+                    
+                    <!-- Profile Image -->
+                    <div class="flex justify-center animate-float">
+                        <img src="assets/img/vuhung-profile.jpeg" alt="Vu Hung Nguyen" class="w-80 h-80 rounded-full object-cover border-4 border-primary shadow-2xl">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Grid Section -->
-        <section class="quick-links" id="projects">
-            <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="links-grid">
-                    <div class="link-card">
-                        <div class="link-icon">🤖</div>
-                        <h3>Company - AI Business Plan Generator</h3>
-                        <p>Designed and deployed complex AI systems for automated business plan generation. Developed Python tools to automate response generation and built intricate prompt workflows using ChatGPT API.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">OpenAI API</span>
-                            <span class="tech-tag">CI/CD</span>
+        <section class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Featured Projects</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">AI-driven solutions and innovative applications</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- AI Business Plan Generator -->
+                    <div class="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div class="p-8">
+                            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Company - AI Business Plan Generator</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">Designed and deployed complex AI systems for automated business plan generation. Developed Python tools to automate response generation and built intricate prompt workflows using ChatGPT API.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Python</span>
+                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">OpenAI API</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">CI/CD</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="link-card">
-                        <div class="link-icon">☁️</div>
-                        <h3>Company - DevOps Infrastructure Optimization</h3>
-                        <p>Led SRE/DevOps operations for retail company, achieving 30% AWS cost reduction. Improved Datadog monitoring and alerting, implemented 24x7 system monitoring, and restructured DevOps team with Agile/Kanban best practices.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Datadog</span>
+                    <!-- DevOps Infrastructure Optimization -->
+                    <div class="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div class="p-8">
+                            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">☁️</div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Company - DevOps Infrastructure Optimization</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">Led SRE/DevOps operations for retail company, achieving 30% AWS cost reduction. Improved Datadog monitoring and alerting, implemented 24x7 system monitoring, and restructured DevOps team with Agile/Kanban best practices.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Kubernetes</span>
+                                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Docker</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Datadog</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="link-card">
-                        <div class="link-icon">🚪</div>
-                        <h3>Company - Virtual Waiting Room Solution</h3>
-                        <p>Provided technical guidance and support for virtual waiting room solution with 50+ technology connectors. Managed CDN integrations (Akamai, CloudFront, CloudFlare) and supported multiple programming languages including JavaScript, ASP.NET, Java, and PHP.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">AWS</span>
-                            <span class="tech-tag">.NET</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Node.js</span>
+                    <!-- Virtual Waiting Room Solution -->
+                    <div class="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div class="p-8">
+                            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🚪</div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Company - Virtual Waiting Room Solution</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">Provided technical guidance and support for virtual waiting room solution with 50+ technology connectors. Managed CDN integrations (Akamai, CloudFront, CloudFlare) and supported multiple programming languages including JavaScript, ASP.NET, Java, and PHP.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">.NET</span>
+                                <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm font-medium">Java</span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Node.js</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="link-card">
-                        <div class="link-icon">🚗</div>
-                        <h3>Company - Car-Sharing Service</h3>
-                        <p>Developed car-sharing service from scratch using Java Spring Boot backend and React Native frontend. Led team of 12 developers, managed product backlog, ran sprints, and delivered MVP of online car rental service.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">MySQL</span>
+                    <!-- Car-Sharing Service -->
+                    <div class="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div class="p-8">
+                            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🚗</div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Company - Car-Sharing Service</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">Developed car-sharing service from scratch using Java Spring Boot backend and React Native frontend. Led team of 12 developers, managed product backlog, ran sprints, and delivered MVP of online car rental service.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm font-medium">Java</span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Spring Boot</span>
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React Native</span>
+                                <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">MySQL</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="link-card">
-                        <div class="link-icon">📄</div>
-                        <h3>Personal - AI Resume Tailoring Tool</h3>
-                        <p>AI-powered web application that tailors resumes to match specific job descriptions using Google Gemini AI. Features smart resume analysis, multiple export formats, and side-by-side comparison.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                            <span class="tech-tag">Gemini AI</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ai-resume-jd-tailored.vercel.app" class="btn btn-outline" target="_blank" onclick="gtag('event', 'click', {'event_category': 'project', 'event_label': 'ai_resume_demo', 'value': 1});">Live Demo</a>
-                            <a href="https://github.com/vuhung16au/ai-resume-jd-tailored" class="btn btn-primary" target="_blank" onclick="gtag('event', 'click', {'event_category': 'project', 'event_label': 'ai_resume_source', 'value': 1});">Source Code</a>
+                    <!-- AI Resume Tailoring Tool -->
+                    <div class="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div class="p-8">
+                            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">📄</div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Personal - AI Resume Tailoring Tool</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">AI-powered web application that tailors resumes to match specific job descriptions using Google Gemini AI. Features smart resume analysis, multiple export formats, and side-by-side comparison.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">Next.js</span>
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React</span>
+                                <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Gemini AI</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://ai-resume-jd-tailored.vercel.app" class="flex-1 bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-center" target="_blank" onclick="gtag('event', 'click', {'event_category': 'project', 'event_label': 'ai_resume_demo', 'value': 1});">Live Demo</a>
+                                <a href="https://github.com/vuhung16au/ai-resume-jd-tailored" class="flex-1 border-2 border-primary text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-lg font-medium transition-colors text-center" target="_blank" onclick="gtag('event', 'click', {'event_category': 'project', 'event_label': 'ai_resume_source', 'value': 1});">Source Code</a>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="link-card">
-                        <div class="link-icon">🧠</div>
-                        <h3>Personal - Quiz Application Platform</h3>
-                        <p>Interactive quiz platform built with modern web technologies. Features user authentication, quiz creation, scoring system, and responsive design for optimal user experience across all devices.</p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Vercel</span>
-                            <span class="tech-tag">Modern Web</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://quiz-gotitright.vercel.app/en/quizzes" class="btn btn-outline" target="_blank" onclick="gtag('event', 'click', {'event_category': 'project', 'event_label': 'quiz_demo', 'value': 1});">Live Demo</a>
+                    <!-- Quiz Application Platform -->
+                    <div class="group bg-white dark:bg-gray-900 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 dark:border-gray-700 overflow-hidden">
+                        <div class="p-8">
+                            <div class="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">🧠</div>
+                            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-primary dark:group-hover:text-blue-400 transition-colors">Personal - Quiz Application Platform</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">Interactive quiz platform built with modern web technologies. Features user authentication, quiz creation, scoring system, and responsive design for optimal user experience across all devices.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React</span>
+                                <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Vercel</span>
+                                <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Modern Web</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="https://quiz-gotitright.vercel.app/en/quizzes" class="flex-1 bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-center" target="_blank" onclick="gtag('event', 'click', {'event_category': 'project', 'event_label': 'quiz_demo', 'value': 1});">Live Demo</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,27 +295,36 @@
         </section>
 
         <!-- Project Categories Section -->
-        <section class="about">
-            <div class="container">
-                <h2 class="section-title">Project Categories</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>AI & Machine Learning</h3>
-                        <p>AI-driven solutions including prompt engineering, LLM development, and intelligent automation systems built with Python and modern AI frameworks.</p>
-                        
-                        <h3>Cloud & DevOps</h3>
-                        <p>AWS infrastructure optimization, CI/CD pipeline development, and scalable cloud solutions with monitoring and alerting systems.</p>
-                        
-                        <h3>Full-Stack Development</h3>
-                        <p>End-to-end web and mobile applications using Java Spring Boot, React Native, and modern web technologies with database design and API development.</p>
-                        
-                        <h3>Open Source & Personal</h3>
-                        <p>Community-driven projects and personal initiatives showcasing innovative solutions in AI, web development, and educational technology.</p>
+        <section class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Project Categories</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">Diverse expertise across multiple domains</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">🤖</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">AI & Machine Learning</h3>
+                        <p class="text-gray-600 dark:text-gray-300">AI-driven solutions including prompt engineering, LLM development, and intelligent automation systems built with Python and modern AI frameworks.</p>
                     </div>
-                    <div class="about-image">
-                        <div class="profile-placeholder">
-                            <span>💻</span>
-                        </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">☁️</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Cloud & DevOps</h3>
+                        <p class="text-gray-600 dark:text-gray-300">AWS infrastructure optimization, CI/CD pipeline development, and scalable cloud solutions with monitoring and alerting systems.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">💻</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Full-Stack Development</h3>
+                        <p class="text-gray-600 dark:text-gray-300">End-to-end web and mobile applications using Java Spring Boot, React Native, and modern web technologies with database design and API development.</p>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">🚀</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Open Source & Personal</h3>
+                        <p class="text-gray-600 dark:text-gray-300">Community-driven projects and personal initiatives showcasing innovative solutions in AI, web development, and educational technology.</p>
                     </div>
                 </div>
             </div>
@@ -212,27 +332,28 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Vu Hung Nguyen</h3>
-                    <p>Developer & Professional</p>
+    <footer class="bg-gray-900 dark:bg-gray-950 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Vu Hung Nguyen</h3>
+                    <p class="text-gray-400 mb-4">ML/AI Solutions Engineer & Lecturer</p>
+                    <p class="text-gray-400">Building intelligent systems and sharing knowledge in Sydney, Australia.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/vuhung16au" class="social-link" aria-label="GitHub" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'github', 'value': 1});">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/vuhung16au" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="GitHub" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'github', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07 .9 1.58 2.36 1.13 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.56-1.13-4.56-5 0-1.11.39-2.02 1.03-2.73-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04A9.3 9.3 0 0 1 12 7.07c.85 0 1.71.12 2.51.35 1.9-1.31 2.74-1.04 2.74-1.04.56 1.41.21 2.45.11 2.71.64.71 1.03 1.62 1.03 2.73 0 3.88-2.34 4.73-4.57 4.98.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .26.18.58.69.48A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/vuhung16au/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'linkedin', 'value': 1});">
+                        <a href="https://www.linkedin.com/in/vuhung16au/" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="LinkedIn" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'linkedin', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.4v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/>
                             </svg>
                         </a>
-                        <a href="mailto:vuhung16plus{remove_this_part}@gmail.com" class="social-link" aria-label="Email" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'email', 'value': 1});">
+                        <a href="mailto:vuhung16plus{remove_this_part}@gmail.com" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="Email" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'email', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
                             </svg>
@@ -240,12 +361,73 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 Vu Hung Nguyen. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('span');
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', function() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>

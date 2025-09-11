@@ -13,8 +13,56 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vuhung16au.github.io/experience.html">
     <meta property="og:image" content="assets/favicon/android-chrome-512x512.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <!-- Tailwind CSS 4.0 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        accent: '#28a745',
+                        graphite: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -37,159 +85,251 @@
         });
     </script>
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-brand">
-                <a href="index.html">Vu Hung Nguyen</a>
+<body class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand -->
+                <div class="text-2xl font-bold">
+                    <a href="index.html" class="text-primary hover:text-accent transition-colors duration-200">Vu Hung Nguyen</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        About me
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Projects
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="experience.html" class="text-primary dark:text-blue-400 font-medium transition-colors duration-200 relative group">
+                        Experience
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary"></span>
+                    </a>
+                    <a href="skills.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Skills
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Contact me
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </div>
+                
+                <!-- Theme Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+                        <span class="text-xl">☀️</span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="experience.html" class="nav-link active">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="skills.html" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact me</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Home</a>
+                <a href="about.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">About me</a>
+                <a href="projects.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Projects</a>
+                <a href="experience.html" class="block text-primary dark:text-blue-400 font-medium transition-colors duration-200">Experience</a>
+                <a href="skills.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Skills</a>
+                <a href="contact.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Contact me</a>
             </div>
-            <button class="theme-toggle" id="theme-toggle">
-                <span class="theme-icon">☀️</span>
-            </button>
+        </div>
         </nav>
-    </header>
 
     <!-- Main Content -->
-    <main class="main">
-        <!-- Experience Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">My Experience</h1>
-                        <p class="hero-subtitle">Professional Journey</p>
-                        <p class="hero-description">
-                            A timeline of my professional experience, achievements, and the path that has shaped my career.
-                        </p>
-                    </div>
-                    <div class="hero-image">
-                        <div class="profile-placeholder">
-                            <span>💼</span>
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                    <div class="space-y-8 animate-fade-in">
+                        <div class="space-y-4">
+                            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                                Professional Experience
+                            </h1>
+                            <p class="text-xl text-primary dark:text-blue-400 font-semibold">
+                                15+ Years of Technical Excellence
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                A comprehensive journey through AI engineering, cloud architecture, and technical leadership roles that have shaped my expertise in building scalable solutions.
+                            </p>
                         </div>
+                    </div>
+                    
+                    <!-- Profile Image -->
+                    <div class="flex justify-center animate-float">
+                        <img src="assets/img/vuhung-profile.jpeg" alt="Vu Hung Nguyen" class="w-80 h-80 rounded-full object-cover border-4 border-primary shadow-2xl">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience Timeline Section -->
-        <section class="about" id="experience">
-            <div class="container">
-                <h2 class="section-title">Work Experience</h2>
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">Feb 2024 - Present</div>
-                            <h3>AI Engineer</h3>
-                            <h4>BAP Australia, Sydney</h4>
-                            <p>As an AI Engineer, I am responsible for crafting prompts that drive the entire system. I developed Python tools to automate response generation and build workflows where the next prompts utilize the output of previous ones. My role also involved creating criteria for prompt responses, and verifying and evaluating outputs to ensure quality and relevance.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">OpenAI/ChatGPT API</span>
-                                <span class="skill-tag">Automation</span>
-                                <span class="skill-tag">CI/CD</span>
+        <section class="py-20 bg-white dark:bg-gray-800" id="experience">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Work Experience</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">A timeline of my professional journey and achievements</p>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">🤖</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">AI Engineer</h3>
+                                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">BAP Australia, Sydney</h4>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Feb 2024 - Present</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    As an AI Engineer, I am responsible for crafting prompts that drive the entire system. I developed Python tools to automate response generation and build workflows where the next prompts utilize the output of previous ones. My role also involved creating criteria for prompt responses, and verifying and evaluating outputs to ensure quality and relevance.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Python</span>
+                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">OpenAI/ChatGPT API</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Automation</span>
+                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">CI/CD</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">Jun 2023 - Dec 2023</div>
-                            <h3>Senior Solutions Engineer</h3>
-                            <h4>Queue-it, Sydney</h4>
-                            <p>As a Senior Solution Engineer, I helped customers using our product - a virtual waiting room solution, provided technical guidance, troubleshot, managed support tickets, and event monitoring. The product included over 50 connectors with a wide range of technologies.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">Akamai</span>
-                                <span class="skill-tag">CloudFront</span>
-                                <span class="skill-tag">CloudFlare</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">.NET</span>
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">PHP</span>
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">🚪</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">Senior Solutions Engineer</h3>
+                                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">Queue-it, Sydney</h4>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Jun 2023 - Dec 2023</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    As a Senior Solution Engineer, I helped customers using our product - a virtual waiting room solution, provided technical guidance, troubleshot, managed support tickets, and event monitoring. The product included over 50 connectors with a wide range of technologies.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Akamai</span>
+                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">CloudFront</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">CloudFlare</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">AWS</span>
+                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">.NET</span>
+                                    <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm font-medium">Java</span>
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium">Node.js</span>
+                                    <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">PHP</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">Nov 2022 - Feb 2023</div>
-                            <h3>SRE/DevOps Lead</h3>
-                            <h4>Yody, Hanoi/Vietnam</h4>
-                            <p>Overseeing the planning, monitoring, and leadership of DevOps operations, focusing on effectively managing service delivery, deployment processes, CI/CD pipelines, and monitoring systems for a dynamic retail company. Achieved 30% cost reduction in AWS infrastructure.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">Kubernetes</span>
-                                <span class="skill-tag">Datadog</span>
-                                <span class="skill-tag">Elastic Search</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                                <span class="skill-tag">Kafka</span>
-                                <span class="skill-tag">Redis</span>
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">☁️</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">SRE/DevOps Lead</h3>
+                                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">Yody, Hanoi/Vietnam</h4>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Nov 2022 - Feb 2023</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    Overseeing the planning, monitoring, and leadership of DevOps operations, focusing on effectively managing service delivery, deployment processes, CI/CD pipelines, and monitoring systems for a dynamic retail company. Achieved 30% cost reduction in AWS infrastructure.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">Docker</span>
+                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Kubernetes</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">Datadog</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Elastic Search</span>
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium">MySQL</span>
+                                    <span class="px-3 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 rounded-full text-sm font-medium">PostgreSQL</span>
+                                    <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm font-medium">Kafka</span>
+                                    <span class="px-3 py-1 bg-pink-100 dark:bg-pink-900 text-pink-800 dark:text-pink-200 rounded-full text-sm font-medium">Redis</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">Mar 2018 - Mar 2023</div>
-                            <h3>Tech Lead</h3>
-                            <h4>VTI Group, Hanoi/Vietnam</h4>
-                            <p>Developed a car-sharing service from scratch using Java Spring Boot as the backend and React Native for the front end with a team size of 12 staff at peak time. The system allowed users to rent a car(s) at a station for a specific duration in a region.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Linux</span>
-                                <span class="skill-tag">Java</span>
-                                <span class="skill-tag">Spring Boot</span>
-                                <span class="skill-tag">React Native</span>
-                                <span class="skill-tag">React JS</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">jUnit</span>
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">🚗</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">Tech Lead</h3>
+                                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">VTI Group, Hanoi/Vietnam</h4>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Mar 2018 - Mar 2023</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    Developed a car-sharing service from scratch using Java Spring Boot as the backend and React Native for the front end with a team size of 12 staff at peak time. The system allowed users to rent a car(s) at a station for a specific duration in a region.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">Linux</span>
+                                    <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm font-medium">Java</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Spring Boot</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">React Native</span>
+                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">React JS</span>
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium">MySQL</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">jUnit</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <div class="timeline-date">Jun 2016 - Mar 2018</div>
-                            <h3>CTO/Tech Lead</h3>
-                            <h4>Fuji Technology, Hanoi/Vietnam</h4>
-                            <p>Maintained and implemented new features across multiple systems in the education domain for customers. Served as ScrumMaster and Account/Project Manager, training the team on the Scrum framework and system testing.</p>
-                            <div class="timeline-skills">
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">Linux</span>
-                                <span class="skill-tag">PHP</span>
-                                <span class="skill-tag">jQuery</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">Scrum</span>
-                                <span class="skill-tag">Agile</span>
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 border border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                <span class="text-2xl">🎓</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-1">CTO/Tech Lead</h3>
+                                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">Fuji Technology, Hanoi/Vietnam</h4>
+                                    </div>
+                                    <span class="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Jun 2016 - Mar 2018</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                    Maintained and implemented new features across multiple systems in the education domain for customers. Served as ScrumMaster and Account/Project Manager, training the team on the Scrum framework and system testing.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">AWS</span>
+                                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-sm font-medium">Linux</span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">PHP</span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">jQuery</span>
+                                    <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm font-medium">MySQL</span>
+                                    <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">Scrum</span>
+                                    <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900 text-cyan-800 dark:text-cyan-200 rounded-full text-sm font-medium">Agile</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -198,29 +338,32 @@
         </section>
 
         <!-- Education Section -->
-        <section class="quick-links">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="links-grid">
-                    <div class="link-card">
-                        <div class="link-icon">🎓</div>
-                        <h3>Master of Engineering in Information Technology</h3>
-                        <h4>The University of Electro-Communications, Tokyo, Japan</h4>
-                        <p>Graduated April 2006</p>
-                        <p>Advanced studies in Information Technology with focus on engineering principles and technical applications.</p>
+        <section class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Education & Teaching</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">Academic background and current teaching positions</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">🎓</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Master of Engineering in Information Technology</h3>
+                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">The University of Electro-Communications, Tokyo, Japan</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Graduated April 2006</p>
+                        <p class="text-gray-600 dark:text-gray-300">Advanced studies in Information Technology with focus on engineering principles and technical applications.</p>
                     </div>
-                    <div class="link-card">
-                        <div class="link-icon">📚</div>
-                        <h3>Bachelor of Engineering in Information Technology</h3>
-                        <h4>The University of Electro-Communications, Tokyo, Japan</h4>
-                        <p>Graduated April 2004</p>
-                        <p>Foundation in Information Technology engineering with strong mathematical and technical background.</p>
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">📚</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Bachelor of Engineering in Information Technology</h3>
+                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">The University of Electro-Communications, Tokyo, Japan</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Graduated April 2004</p>
+                        <p class="text-gray-600 dark:text-gray-300">Foundation in Information Technology engineering with strong mathematical and technical background.</p>
                     </div>
-                    <div class="link-card">
-                        <div class="link-icon">🌍</div>
-                        <h3>Current Teaching Positions</h3>
-                        <h4>Victorian Institute of Technology & Australian Catholic University</h4>
-                        <p>Lecturer in Data Science, Machine Learning, and Programming with Python. Teaching Mathematics, Database, Networking, and supervising capstone projects.</p>
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1 text-center">
+                        <div class="text-5xl mb-6">🌍</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Current Teaching Positions</h3>
+                        <h4 class="text-lg font-semibold text-primary dark:text-blue-400 mb-2">Victorian Institute of Technology & Australian Catholic University</h4>
+                        <p class="text-gray-600 dark:text-gray-300">Lecturer in Data Science, Machine Learning, and Programming with Python. Teaching Mathematics, Database, Networking, and supervising capstone projects.</p>
                     </div>
                 </div>
             </div>
@@ -228,27 +371,28 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Vu Hung Nguyen</h3>
-                    <p>Developer & Professional</p>
+    <footer class="bg-gray-900 dark:bg-gray-950 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Vu Hung Nguyen</h3>
+                    <p class="text-gray-400 mb-4">AI Solutions Engineer & Lecturer</p>
+                    <p class="text-gray-400">Building intelligent systems and sharing knowledge in Sydney, Australia.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/vuhung16au" class="social-link" aria-label="GitHub" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'github', 'value': 1});">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/vuhung16au" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="GitHub" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'github', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07 .9 1.58 2.36 1.13 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.56-1.13-4.56-5 0-1.11.39-2.02 1.03-2.73-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04A9.3 9.3 0 0 1 12 7.07c.85 0 1.71.12 2.51.35 1.9-1.31 2.74-1.04 2.74-1.04.56 1.41.21 2.45.11 2.71.64.71 1.03 1.62 1.03 2.73 0 3.88-2.34 4.73-4.57 4.98.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .26.18.58.69.48A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/vuhung16au/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'linkedin', 'value': 1});">
+                        <a href="https://www.linkedin.com/in/vuhung16au/" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="LinkedIn" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'linkedin', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.4v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/>
                             </svg>
                         </a>
-                        <a href="mailto:vuhung16plus{remove_this_part}@gmail.com" class="social-link" aria-label="Email" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'email', 'value': 1});">
+                        <a href="mailto:vuhung16plus{remove_this_part}@gmail.com" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="Email" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'email', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
                             </svg>
@@ -256,12 +400,73 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 Vu Hung Nguyen. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('span');
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', function() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>

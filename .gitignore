@@ -124,4 +124,5 @@ out/
 # Project specific files
 logs/
 Prompt.md
+Prompt-*.md
 TODO*.md

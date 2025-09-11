@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about Vu Hung Nguyen - AI Solutions Engineer with 15+ years experience in AI engineering, data science, and machine learning. Expert in Python, AI Prompt Engineering, and LLM development.">
-    <meta name="keywords" content="About AI Solutions Engineer, ML/AI Solutions Engineer, AI Engineer, Machine Learning Engineer, Python Expert, AI Prompt Engineering, LLM Development, LangChain, Data Science, Machine Learning, Sydney AI Engineer, Australia AI Solutions">
+    <meta name="description" content="About Vu Hung Nguyen - ML/AI Solutions Engineer with 15+ years experience. Learn about my journey in AI, Machine Learning, Python development, and teaching Data Science.">
+    <meta name="keywords" content="About Vu Hung Nguyen, AI Engineer Bio, Machine Learning Engineer, Python Developer, Data Science Lecturer, AI Solutions Engineer, Sydney AI Professional, Australia AI Expert">
     <meta name="author" content="Vu Hung Nguyen">
-    <title>About Me - Vu Hung Nguyen | AI Solutions Engineer & ML/AI Solutions Engineer</title>
+    <title>About Me - Vu Hung Nguyen | ML/AI Solutions Engineer</title>
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="About Vu Hung Nguyen - AI Solutions Engineer">
-    <meta property="og:description" content="AI Solutions Engineer with 15+ years experience in AI engineering, data science, and machine learning. Expert in Python, AI Prompt Engineering, and LLM development.">
+    <meta property="og:title" content="About Me - Vu Hung Nguyen | AI Solutions Engineer">
+    <meta property="og:description" content="Learn about Vu Hung Nguyen's journey as an AI Solutions Engineer with 15+ years experience in Python, Machine Learning, and AI development.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://vuhung16au.github.io/about.html">
     <meta property="og:image" content="assets/favicon/android-chrome-512x512.png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/dark-mode.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <meta name="theme-color" content="#ffffff">
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWY9HL3C85"></script>
@@ -36,99 +25,165 @@
             page_location: window.location.href
         });
     </script>
+    
+    <!-- Tailwind CSS 4.0 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007bff',
+                        secondary: '#6c757d',
+                        accent: '#28a745',
+                        graphite: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.3s ease-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <meta name="theme-color" content="#007bff">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-brand">
-                <a href="index.html">Vu Hung Nguyen</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link active">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="projects.html" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="experience.html" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="skills.html" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact me</a>
-                </li>
-            </ul>
-            <div class="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <button class="theme-toggle" id="theme-toggle">
-                <span class="theme-icon">☀️</span>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main">
-        <!-- About Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1 class="hero-title">About Me</h1>
-                        <p class="hero-subtitle">Get to know me better</p>
-                        <p class="hero-description">
-                            Learn about my journey, passion, and what drives me in the world of technology and development.
-                        </p>
-                    </div>
-                    <div class="hero-image">
-                        <img src="assets/img/vuhung-profile.jpeg" alt="Vu Hung Nguyen" class="profile-image large" loading="lazy">
-                    </div>
+<body class="font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 transition-all duration-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <!-- Brand -->
+                <div class="text-2xl font-bold">
+                    <a href="index.html" class="text-primary hover:text-accent transition-colors duration-200">Vu Hung Nguyen</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Home
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="text-primary dark:text-blue-400 font-medium transition-colors duration-200 relative group">
+                        About me
+                        <span class="absolute -bottom-1 left-0 w-full h-0.5 bg-primary"></span>
+                    </a>
+                    <a href="projects.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Projects
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="experience.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Experience
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="skills.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Skills
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200 relative group">
+                        Contact me
+                        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                </div>
+                
+                <!-- Theme Toggle & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+                        <span class="text-xl">☀️</span>
+                    </button>
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+            <div class="px-6 py-4 space-y-4">
+                <a href="index.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Home</a>
+                <a href="about.html" class="block text-primary dark:text-blue-400 font-medium transition-colors duration-200">About me</a>
+                <a href="projects.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Projects</a>
+                <a href="experience.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Experience</a>
+                <a href="skills.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Skills</a>
+                <a href="contact.html" class="block text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary font-medium transition-colors duration-200">Contact me</a>
+            </div>
+        </div>
+    </nav>
 
-        <!-- Detailed About Section -->
-        <section class="about" id="about">
-            <div class="container">
-                <h2 class="section-title">My Story</h2>
-                <div class="about-content">
-                    <div class="about-image">
-                        <img src="assets/img/vuhung-profile.jpeg" alt="Vu Hung Nguyen" class="profile-image large" loading="lazy">
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="pt-20 pb-16 bg-gradient-to-br from-blue-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                    <div class="space-y-8 animate-fade-in">
+                        <div class="space-y-4">
+                            <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
+                                About Me
+                            </h1>
+                            <p class="text-xl text-primary dark:text-blue-400 font-semibold">
+                                My Journey in AI & Technology
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Passionate AI Solutions Engineer with over 15 years of experience building intelligent systems and sharing knowledge through teaching.
+                            </p>
+                        </div>
                     </div>
-                    <div class="about-text">
-                        <h3 class="about-name">Vu Hung Nguyen</h3>
-                        <p class="about-title">ML/AI Solutions Engineer & Lecturer</p>
-                        <p class="about-bio">
-                            I am a dedicated and experienced IT professional with over 15 years of industry expertise and a strong foundation in Mathematics. I specialize in building AI-driven solutions and automating tasks, with a passion for mathematics, data automation, and visualization.
-                        </p>
-                        <p class="about-bio">
-                            Currently working as an AI Engineer at BAP Australia, I design and deploy complex AI systems, automate response generation with Python tools, and create intricate prompt workflows. My experience includes building scalable model deployment and monitoring pipelines, setting criteria for prompt responses, and evaluating outputs for quality and relevance.
-                        </p>
-                        <p class="about-bio">
-                            Beyond my professional role, I possess over two years of hands-on experience in LLM development and implementation. My expertise covers RAG (Retrieval-Augmented Generation), LangChain, and API integrations with platforms like Gemini and Llama. I am proficient in building multi-step and multi-agent AI systems and managing intricate AI workflows using LangChain and LangGraph.
-                        </p>
-                        <p class="about-bio">
-                            As a lecturer at both Australian Catholic University and Victorian Institute of Technology, I teach Data Science & Machine Learning, Programming with Python, and Mathematics. This experience has cultivated my ability to articulate intricate AI concepts to diverse audiences, from technical colleagues to non-technical business stakeholders.
-                        </p>
-                        <div class="about-skills">
-                            <h4>Key Skills</h4>
-                            <div class="skills-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">AI/ML</span>
-                                <span class="skill-tag">LangChain</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">DevOps</span>
-                                <span class="skill-tag">Data Science</span>
-                                <span class="skill-tag">Machine Learning</span>
+                    
+                    <!-- Profile Image -->
+                    <div class="flex justify-center animate-float">
+                        <div class="relative">
+                            <img src="assets/img/vuhung-profile.jpeg" alt="Vu Hung Nguyen" class="w-80 h-80 rounded-full object-cover border-4 border-primary shadow-2xl">
+                            <div class="absolute -bottom-4 -right-4 w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                15+
                             </div>
                         </div>
                     </div>
@@ -136,193 +191,243 @@
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section class="education">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="education-grid">
-                    <div class="education-card">
-                        <div class="education-icon">🎓</div>
-                        <h3>Master of Engineering in Information Technology</h3>
-                        <p class="institution">The University of Electro-Communications, Tokyo, Japan</p>
-                        <p class="year">April 2006</p>
-                    </div>
-                    <div class="education-card">
-                        <div class="education-icon">🎓</div>
-                        <h3>Bachelor of Engineering in Information Technology</h3>
-                        <p class="institution">The University of Electro-Communications, Tokyo, Japan</p>
-                        <p class="year">April 2004</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- About Content Section -->
+        <section class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="prose prose-lg dark:prose-invert max-w-none">
+                    <div class="space-y-8">
+                        <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl">
+                            <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">My Story</h2>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                I'm Vu Hung Nguyen, an AI Solutions Engineer with over 15 years of experience in the technology industry. 
+                                My journey began with a passion for solving complex problems using technology, which led me to specialize 
+                                in Artificial Intelligence, Machine Learning, and Data Science.
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                                Based in Sydney, Australia, I've had the privilege of working on cutting-edge AI projects across various 
+                                industries, from retail and e-commerce to fintech and education. My expertise spans Python development, 
+                                AI prompt engineering, cloud infrastructure, and building scalable AI solutions.
+                            </p>
+                            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Beyond my professional work, I'm passionate about sharing knowledge and have been teaching Data Science 
+                                and Machine Learning to help others enter this exciting field. I believe in the power of AI to transform 
+                                businesses and improve lives.
+                            </p>
+                        </div>
 
-        <!-- Professional Experience Section -->
-        <section class="experience">
-            <div class="container">
-                <h2 class="section-title">Professional Experience</h2>
-                <div class="experience-timeline">
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>AI Engineer</h3>
-                            <span class="company">BAP Australia, Sydney</span>
-                            <span class="period">Feb 2024 – Present</span>
-                        </div>
-                        <p class="experience-description">
-                            As an AI Engineer, I craft prompts that drive the entire system, converting company information into business ideas and plans. I develop Python tools to automate response generation and build workflows where subsequent prompts utilize previous outputs. My role involves creating criteria for prompt responses, evaluating outputs for quality, and collaborating with frontend and backend teams for ChatGPT integration.
-                        </p>
-                        <div class="experience-tools">
-                            <strong>Tools:</strong> PyCharm, GitLab CI/CD, Backlog
-                        </div>
-                        <div class="experience-tech">
-                            <strong>Technologies:</strong> AWS, OpenAI/ChatGPT API, Python, Automation, CI/CD
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Senior Solutions Engineer</h3>
-                            <span class="company">Queue-it, Sydney</span>
-                            <span class="period">Jun 2023 - Dec 2023</span>
-                        </div>
-                        <p class="experience-description">
-                            Helped customers using our virtual waiting room solution, provided technical guidance, troubleshot issues, managed support tickets, and monitored events. The product included over 50 connectors with technologies like CDNs (Akamai, CloudFront, CloudFlare) and programming languages including JavaScript, ASP.NET, Java, and PHP.
-                        </p>
-                        <div class="experience-tech">
-                            <strong>Technologies:</strong> Akamai, CloudFront, CloudFlare, AWS Cloud, .NET, Java, Node.js, PHP
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>SRE/DevOps Lead</h3>
-                            <span class="company">Yody, Hanoi/Vietnam</span>
-                            <span class="period">Nov 2022 - Feb 2023</span>
-                        </div>
-                        <p class="experience-description">
-                            Oversaw DevOps operations for a dynamic retail company, managing service delivery, deployment processes, CI/CD pipelines, and monitoring systems. Achieved 30% cost reduction in AWS infrastructure, improved Datadog monitoring and alerting, and restructured the DevOps team with clear inter-processes.
-                        </p>
-                        <div class="experience-tools">
-                            <strong>Tools:</strong> Jira, Confluence, GitLab CI/CD, Datadog, Prometheus, Grafana
-                        </div>
-                        <div class="experience-tech">
-                            <strong>Technologies:</strong> AWS, Docker, Kubernetes, Elastic Search, MySQL, PostgreSQL, Kafka, Redis, Node.js, Java, Spring Boot
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>Tech Lead</h3>
-                            <span class="company">VTI Group, Hanoi/Vietnam</span>
-                            <span class="period">March 2018 – March 2023</span>
-                        </div>
-                        <p class="experience-description">
-                            Developed a car-sharing service from scratch using Java Spring Boot backend and React Native frontend with a team of 12 staff. The system allowed users to rent cars at stations for specific durations in designated regions, resulting in a successful MVP of an online service.
-                        </p>
-                        <div class="experience-tools">
-                            <strong>Tools:</strong> Git, Trello, Slack, Jira, Confluence
-                        </div>
-                        <div class="experience-tech">
-                            <strong>Technologies:</strong> AWS, Linux, Java, React Native, React JS, MySQL, JUnit
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="experience-header">
-                            <h3>CTO/Tech Lead</h3>
-                            <span class="company">Fuji Technology, Hanoi/Vietnam</span>
-                            <span class="period">Jun 2016 – March 2018</span>
-                        </div>
-                        <p class="experience-description">
-                            Maintained and implemented new features across multiple systems in the education domain. Served as ScrumMaster and Account/Project Manager, training teams on Scrum framework, running Scrum activities, and managing project delivery with proper estimation and progress tracking.
-                        </p>
-                        <div class="experience-tools">
-                            <strong>Tools:</strong> Backlog, Git, Kanban
-                        </div>
-                        <div class="experience-tech">
-                            <strong>Technologies:</strong> AWS/Linux, PHP, jQuery, MySQL
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+                                <div class="text-4xl mb-4">🎯</div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Mission</h3>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    To build intelligent systems that solve real-world problems and empower businesses to leverage 
+                                    the full potential of AI and machine learning technologies.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700">
+                                <div class="text-4xl mb-4">🌟</div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Vision</h3>
+                                <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    To be at the forefront of AI innovation, creating solutions that make technology more accessible 
+                                    and beneficial for everyone, while mentoring the next generation of AI professionals.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Teaching Experience Section -->
-        <section class="teaching">
-            <div class="container">
-                <h2 class="section-title">Teaching Experience</h2>
-                <div class="teaching-grid">
-                    <div class="teaching-card">
-                        <div class="teaching-icon">🏫</div>
-                        <h3>Australian Catholic University, Sydney</h3>
-                        <p class="period">Jul 2024 – Present</p>
-                        <ul class="teaching-subjects">
-                            <li>Data Science & Data Visualisation (ITEC622, ITEC202)</li>
-                            <li>Data Science & Machine Learning (ITEC203)</li>
-                            <li>Programming with Python and Data Science (ITEC102)</li>
+        <!-- Expertise Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-900">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Core Expertise</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">Areas where I excel and make the biggest impact</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <div class="text-5xl mb-6">🤖</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">AI & Machine Learning</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Specialized in building AI systems, prompt engineering, and developing machine learning models 
+                            that drive business value and innovation.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li>• LLM Development & Integration</li>
+                            <li>• AI Prompt Engineering</li>
+                            <li>• Machine Learning Model Development</li>
+                            <li>• AI Workflow Automation</li>
                         </ul>
                     </div>
-                    <div class="teaching-card">
-                        <div class="teaching-icon">🏫</div>
-                        <h3>Victorian Institute of Technology, Sydney</h3>
-                        <p class="period">Sep 2024 – Present</p>
-                        <ul class="teaching-subjects">
-                            <li>Mathematics (ITSU1012)</li>
-                            <li>Database, Networking, Programming (ITAP1001, ITDA1001, ITSU1001)</li>
-                            <li>Capstone Projects Supervision (ICT802, ITSU3008)</li>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <div class="text-5xl mb-6">🐍</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Python Development</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Expert in Python programming with extensive experience in building scalable applications, 
+                            APIs, and data processing systems.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li>• Web Application Development</li>
+                            <li>• API Design & Development</li>
+                            <li>• Data Processing & Analysis</li>
+                            <li>• Automation & Scripting</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <div class="text-5xl mb-6">☁️</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Cloud & DevOps</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Proven track record in cloud infrastructure optimization, CI/CD implementation, 
+                            and building scalable, reliable systems.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li>• AWS Infrastructure Management</li>
+                            <li>• CI/CD Pipeline Development</li>
+                            <li>• Container Orchestration</li>
+                            <li>• Monitoring & Alerting Systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <div class="text-5xl mb-6">📊</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Data Science</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Experienced in extracting insights from data, building predictive models, 
+                            and creating data-driven solutions for business challenges.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li>• Statistical Analysis & Modeling</li>
+                            <li>• Data Visualization</li>
+                            <li>• Predictive Analytics</li>
+                            <li>• Business Intelligence</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <div class="text-5xl mb-6">👥</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Team Leadership</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Experienced in leading development teams, managing product backlogs, 
+                            and delivering successful projects using Agile methodologies.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li>• Agile/Scrum Project Management</li>
+                            <li>• Team Building & Mentoring</li>
+                            <li>• Product Strategy & Planning</li>
+                            <li>• Stakeholder Communication</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 hover:-translate-y-1">
+                        <div class="text-5xl mb-6">🎓</div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Teaching & Mentoring</h3>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                            Passionate about sharing knowledge and helping others grow in the field of 
+                            AI, machine learning, and data science.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-500 dark:text-gray-400">
+                            <li>• Data Science & ML Course Development</li>
+                            <li>• Technical Mentoring</li>
+                            <li>• Workshop & Training Delivery</li>
+                            <li>• Knowledge Sharing & Documentation</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Additional Sections -->
-        <section class="quick-links">
-            <div class="container">
-                <h2 class="section-title">What I Do</h2>
-                <div class="links-grid">
-                    <div class="link-card">
-                        <div class="link-icon">🤖</div>
-                        <h3>AI Solutions</h3>
-                        <p>Building AI-driven solutions and automating tasks with Python and advanced LLM technologies</p>
+        <!-- Values Section -->
+        <section class="py-20 bg-white dark:bg-gray-800">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">My Values</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300">Principles that guide my work and approach</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">💡</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Innovation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Always exploring new technologies and approaches to solve problems creatively.</p>
                     </div>
-                    <div class="link-card">
-                        <div class="link-icon">📊</div>
-                        <h3>Data Science</h3>
-                        <p>Leveraging mathematical foundation for data automation, visualization, and machine learning</p>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🎯</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Quality</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Committed to delivering high-quality solutions that meet and exceed expectations.</p>
                     </div>
-                    <div class="link-card">
-                        <div class="link-icon">👨‍🏫</div>
-                        <h3>Teaching</h3>
-                        <p>Sharing knowledge in Data Science, Machine Learning, and Programming at leading institutions</p>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">🤝</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Collaboration</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Believing in the power of teamwork and knowledge sharing to achieve great results.</p>
                     </div>
+                    
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span class="text-2xl">📈</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Growth</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm">Continuously learning and improving to stay at the forefront of technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-gradient-to-r from-primary to-accent">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Let's Work Together</h2>
+                <p class="text-xl text-white/90 mb-8 leading-relaxed">
+                    I'm always interested in new opportunities and collaborations. Whether you need AI solutions, 
+                    technical consulting, or want to discuss potential projects, I'd love to hear from you.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg" onclick="gtag('event', 'click', {'event_category': 'cta', 'event_label': 'contact_about', 'value': 1});">
+                        Get In Touch
+                    </a>
+                    <a href="projects.html" class="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg" onclick="gtag('event', 'click', {'event_category': 'cta', 'event_label': 'view_projects_about', 'value': 1});">
+                        View My Projects
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Vu Hung Nguyen</h3>
-                    <p>Developer & Professional</p>
+    <footer class="bg-gray-900 dark:bg-gray-950 text-white py-16">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Vu Hung Nguyen</h3>
+                    <p class="text-gray-400 mb-4">ML/AI Solutions Engineer & Lecturer</p>
+                    <p class="text-gray-400">Building intelligent systems and sharing knowledge in Sydney, Australia.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="social-links">
-                        <a href="https://github.com/vuhung16au" class="social-link" aria-label="GitHub" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'github', 'value': 1});">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/vuhung16au" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="GitHub" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'github', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.51 2.87 8.33 6.84 9.68.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.2-1.12-1.52-1.12-1.52-.92-.64.07-.63.07-.63 1.02.07 1.56 1.07 1.56 1.07 .9 1.58 2.36 1.13 2.94.86.09-.67.35-1.13.63-1.39-2.22-.26-4.56-1.13-4.56-5 0-1.11.39-2.02 1.03-2.73-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04A9.3 9.3 0 0 1 12 7.07c.85 0 1.71.12 2.51.35 1.9-1.31 2.74-1.04 2.74-1.04.56 1.41.21 2.45.11 2.71.64.71 1.03 1.62 1.03 2.73 0 3.88-2.34 4.73-4.57 4.98.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .26.18.58.69.48A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/>
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/in/vuhung16au/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'linkedin', 'value': 1});">
+                        <a href="https://www.linkedin.com/in/vuhung16au/" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="LinkedIn" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'linkedin', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.89 1.62-1.83 3.34-1.83 3.57 0 4.23 2.35 4.23 5.4v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.57V9h3.55v11.45z"/>
                             </svg>
                         </a>
-                        <a href="mailto:vuhung16plus{remove_this_part}@gmail.com" class="social-link" aria-label="Email" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'email', 'value': 1});">
+                        <a href="mailto:vuhung16plus{remove_this_part}@gmail.com" class="w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-full flex items-center justify-center transition-colors duration-200" aria-label="Email" onclick="gtag('event', 'click', {'event_category': 'social', 'event_label': 'email', 'value': 1});">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
                             </svg>
@@ -330,12 +435,73 @@
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
                 <p>&copy; 2025 Vu Hung Nguyen. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <!-- JavaScript -->
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('span');
+        
+        // Check for saved theme preference or default to dark mode
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+        updateThemeIcon(currentTheme);
+
+        themeToggle.addEventListener('click', function() {
+            const isDark = document.documentElement.classList.toggle('dark');
+            const newTheme = isDark ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
 </body>
 </html>
